@@ -4,7 +4,8 @@ Frontend and backend of Japare
 ## Technologies & Pipeline
 
 Our current technology stack:
-| -        | Technology |
+
+| Category | Technology |
 |----------|------------|
 | Backend  | Go         |
 | Frontend | Angular    |
