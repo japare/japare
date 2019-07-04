@@ -21,4 +21,4 @@ Our current development and CI pipeline:
 | Deployment  | Heroku     |
 
 
-This list will be expanded as our project progresses further.
+This list will be expanded as our project progresses.
