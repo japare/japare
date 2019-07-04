@@ -3,11 +3,13 @@ package main
 import (
 	"net/http"
 	"log"
+	"github.com/gorilla/mux"
 )
 
 func main() {
-	// Creates a new serve mux
-	mux := http.NewServeMux()
+
+	router := mux.NewRouter()
+
 
 	// Create room for static files serving
 	// mux.Handle("/node_modules/", http.StripPrefix("/node_modules", http.FileServer(http.Dir("./node_modules"))))
@@ -25,9 +27,9 @@ func main() {
 	// and the files it needs for itself to work.
 	// Order here is critical. This html should contain the base tag like
 	// <base href="/"> *href here should match the HandleFunc path below 
-	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+	router.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "frontend/src/index.html")
 	})
 
-	log.Fatal(http.ListenAndServe(":8000", mux))
+	log.Fatal(http.ListenAndServe(":8000", router))
 }
