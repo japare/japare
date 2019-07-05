@@ -3,7 +3,7 @@ matrix:
     - language: go
       go: 1.12.x
       before_script:
-      - go mod install
+      - go mod download
       script:
       - go test ./...
 
@@ -12,6 +12,7 @@ matrix:
       cache: npm 
       before_script:
       - npm install
+      - npm install -g @angular/cli
       script:
       - ng test
       - ng build
