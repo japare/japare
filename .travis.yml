@@ -11,10 +11,9 @@ matrix:
       node_js: 10
       cache: npm 
       before_script:
-      - npm install
-      - npm install -g @angular/cli
+      - npm install --only=dev
       script:
       - cd frontend
-      - ng test
-      - ng build
+      - ng test 
+      - ng build 
     
