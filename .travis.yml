@@ -1,11 +1,11 @@
-- language: go
-  go: 1.12.x
-  install:
-  - go mod download
-  - nvm install 10
-  - nvm use 10
-  script:
-  - go test ./...
-  - cd frontend
-  - npm install
-  - npm run-script build
+language: go
+go: 1.12.x
+install:
+- go mod download
+- nvm install 10
+- nvm use 10
+script:
+- go test ./...
+- cd frontend
+- npm install
+- npm run-script build
