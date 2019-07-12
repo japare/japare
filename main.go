@@ -4,9 +4,14 @@ import (
 	"net/http"
 	"log"
 	"github.com/gorilla/mux"
+	"os"
 )
 
 func main() {
+	port, ok := os.LookupEnv("PORT")
+	if !ok {
+		port = "8000"
+	}
 
 	router := mux.NewRouter()
 
@@ -31,5 +36,5 @@ func main() {
 		http.ServeFile(w, r, "frontend/src/index.html")
 	})
 
-	log.Fatal(http.ListenAndServe(":8000", router))
+	log.Fatal(http.ListenAndServe(":" + port, router))
 }
