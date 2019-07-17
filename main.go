@@ -35,6 +35,7 @@ func main() {
 	router.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "frontend/src/index.html")
 	})
+	log.Println("Serving at port ", port)
 
 	log.Fatal(http.ListenAndServe(":" + port, router))
 }
