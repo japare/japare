@@ -6,9 +6,7 @@ before_install:
 - nvm install 10
 - nvm use 10
 install:
-# go dependencies
 - go mod download
-# travis dependencies
 - cd frontend
 - npm install
 - cd ..
@@ -17,3 +15,9 @@ script:
 - go build
 - cd frontend
 - npm run-script build
+deploy:
+  provider: heroku
+  api_key:
+    on: master
+    skip_cleanup: true
+    secure: kWM9RGfZ0VP2Yh2lMD9YMVi0Hma7y3xmOCP8Qv3EGUmJa8vipYIjpehgY1WfkdOdc3kWXieWEExm86lrv5PStD9rOV7MfoXRqqXYSVLXHvTGqRLi95nZlKdgKXIorUGVFN1lob7qK4VW7sCWEienAdgxiQLm81Yg51y7RGMZZyhjZCZLSvlHdL4J9SpO2rFbRe1+k6F+liM3Pp9a91qUpXuAUvh+hLYXM2Bqs8eGHIoTVIag1a7c9jUfuxo6lBOituJJeBbePJiMq/+UWIz/vMXJjdQF6G9+o4AdqeCK6sXdZ5FcqRJC+sFjlfCszgSwiR27qHlIgfXC175Y7O81QqQn0Fn1WsQOuS/uqJ4xQc7U+9fxbXyV6C7zhaQThhhOtDiBzYs1Mkdc5psJjhdLN08bc7sPxah8A6mBrZ2y587fqTc89OhqeqKTFcN2ZOnliWCCZyQkvcmeOaaQDApOqeiwnClK58EWU3iLdXMx+rPjsjy9N3bi0DYgdr7FjcIqZoHxrqHumdvPneA5uDRBkwwKQKEVkujuZhxO+A9+MLqpi8zybSOEmFddOL4HyO5tF1XYqMSuWFbJq92oFlNauvFhA/eCvWZyZN7pWx7oyazHJ3KF4fmfS32nmVu27TuYPWgFKh657yJao5gC1DdJoIffBwqweoAsr7PAgHGsjaI=
