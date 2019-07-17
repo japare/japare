@@ -12,7 +12,7 @@ install:
 - cd ..
 script:
 - go test ./...
-- go build -o bin/japare -v .
+- go build -o japare -v .
 - cd frontend
 - npm run-script build
 deploy:
