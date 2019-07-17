@@ -14,6 +14,6 @@ install:
 - cd ..
 script:
 - go test ./...
-- go build
+- go build -o bin/japare -v .
 - cd frontend
 - npm run-script build
