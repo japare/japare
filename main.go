@@ -8,10 +8,19 @@ import (
 )
 
 func main() {
+
+	// parse config vars
 	port, ok := os.LookupEnv("PORT")
 	if !ok {
 		port = "8000"
 	}
+
+	pathIndex, ok := os.LookupEnv("INDEX")
+	if !ok {
+		pathIndex = "frontend/src/index.html"
+	}
+
+
 
 	router := mux.NewRouter()
 
@@ -33,9 +42,10 @@ func main() {
 	// Order here is critical. This html should contain the base tag like
 	// <base href="/"> *href here should match the HandleFunc path below 
 	router.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "frontend/src/index.html")
+		http.ServeFile(w, r, pathIndex)
 	})
 	log.Println("Serving at port ", port)
+	log.Printf("Trying to find index.html at: '%v'\n", pathIndex)
 
 	log.Fatal(http.ListenAndServe("0.0.0.0:" + port, router))
 }
