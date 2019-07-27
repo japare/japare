@@ -1,6 +1,8 @@
 # Japare
 Frontend and backend of Japare
 
+[![Build Status](https://travis-ci.org/japare/japare.svg?branch=master)](https://travis-ci.org/japare/japare)
+
 ## Technologies & Pipeline
 
 Our current technology stack:
