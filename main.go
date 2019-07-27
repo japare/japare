@@ -18,7 +18,7 @@ func main() {
 
 	pathStatic, ok := os.LookupEnv("STATIC_FILES")
 	if !ok {
-		pathStatic = "frontend/dist/frontend/"
+		pathStatic = "dist/frontend/"
 	}
 
 	router := mux.NewRouter()
@@ -46,7 +46,7 @@ func main() {
 
 	log.Println("Serving at port ", port)
 	log.Printf("Trying to find static files at: '%v'\n", pathStatic)
-	log.Printf("Trying to find index html at: '%v'/index.html\n", pathStatic)
+	log.Printf("Trying to find index html at: '%vindex.html'\n", pathStatic)
 
 	log.Fatal(http.ListenAndServe("0.0.0.0:"+port, router))
 }
