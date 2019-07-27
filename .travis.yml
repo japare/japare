@@ -17,6 +17,7 @@ script:
 - npm run-script build
 - cd ..
 deploy:
+  skip_cleanup: true
   provider: heroku
   api_key:
     secure: Tiae73k7oPFRcWBESMZ/Hx2AcN9nsuqmnnH7A6aZCU4HP4ylKKIb+CedhHWoKeMbS7z10aBFx6fsPMGfXGs/g6Rrr2/Lx3/vXFYujOUiGhcaMY0LcLF7SxXOZxay3mUmkosmmzqPQlJaAY2s2z2NsxfXn8g9eJMxx5Fx8daodBsqYsBdHBJaHt0kDGS84OSUCPhkIGJKUflxP9mTWTKlW4nLR/gHv6YILIPxnBQFA00UGSG+1D2gQtV4yt3H3TTstX3GyXhTV6ncTzjC3/emGv7medwbncP0H+xKg+C/wP9MkQSHZbQTHiKhi/RMLi0/DioVexCFtkbJgmtBK2ycfGckDI3hLvz3uoRJMDzAN2ybmBmV+t82rCd68pDjgNBcai9ViaF4FIQalnhCiXTdP6+T1fRhtWT6EQzsLKCzrh8KiEpPqo54+EpIttdgeui+G7nH7le4J+A1VV9oZQJFBxh0ytBP+dxsLoArgSde1z2olG6T0bxwCBeOHJ7hZgepYAo9516TJWGJrC85EvAeSMRhJ458Qy1uUrj1JzmnNLe0YETCO5OaW/dfi/S9hwTz++ql6xR3pynbS9gwKHqZDCiEw7JDm4ENxnkB6oJ4g7D+OB3st86ZKNRXXdNo/xhstvAd2FPZvM6b/QEDoA98sjbQhrrV0S8HdfuUa0I+DRc=
