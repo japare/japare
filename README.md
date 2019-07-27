@@ -20,7 +20,7 @@ Our current development and CI pipeline:
 |-------------|------------|
 | Repository  | Github     |
 | Test Server | Travis CI  |
-| Container   | Docker     |
+| Container   | Heroku Slug|
 | Deployment  | Heroku     |
 
 
