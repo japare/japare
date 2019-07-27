@@ -1,4 +1,4 @@
-# japare
+# Japare
 Frontend and backend of Japare
 
 ## Technologies & Pipeline
