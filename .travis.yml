@@ -14,7 +14,7 @@ script:
 - go test ./...
 - go build -o japare -v .
 - cd frontend
-- npm run-script build
+- npm run-script build-prod
 - cd ..
 deploy:
   skip_cleanup: true

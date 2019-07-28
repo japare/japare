@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open --port 4800",
-    "build": "ng build",
+    "build": "ng build --outputPath=../dist",
+    "build-prod": "ng build --prod --outputPath=../dist",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
