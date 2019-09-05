@@ -1,0 +1,18 @@
+<h3>{{products.length}} results</h3>
+<div class="row-price-sort">
+  <button mat-raised-button>Price range</button>
+  <button mat-raised-button>Sort by</button>
+</div>
+<a *ngFor="let product of products"
+   routerLink="/{{product.id}}"
+   class="row-product"
+   style="display: flex; align-items: center;">
+  <img style="max-height: 100px; margin-right: 1em;"
+    src="{{product.imgPath}}"
+    alt="{{product.name}}">
+  <div style="margin-right: 1em;">
+    <h4># {{product.id}} {{product.name}}</h4>
+    <p>{{product.description}}</p>
+  </div>
+  <mat-icon>save</mat-icon>
+</a>

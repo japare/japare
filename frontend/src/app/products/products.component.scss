@@ -1,0 +1,17 @@
+@import "../../shared/variables";
+
+.row-price-sort {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 1em 0;
+  border-bottom: $white solid 2px;
+}
+.row-product {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  align-items: center;
+  border-bottom: $white solid 2px;
+  text-decoration: none;
+  color: $dark-grey;
+}
